@@ -1,0 +1,13 @@
+<launch>
+
+    <!-- 启动节点 -->
+    <node name="imu_pub" pkg="imu_demo" type="imu_demo_node" output="screen" />
+
+    <node name="imu_activate" pkg="imu_activate" type="imu_activate_node" 
+    output="screen" launch-prefix="sh -c 'sleep 1; $0 %@'" />
+
+    <node name="imu_sub" pkg="imu_demo" type="imu_demo_sub_node" 
+    output="screen" launch-prefix="sh -c 'sleep 2; $0 $@'" />
+
+
+</launch>
