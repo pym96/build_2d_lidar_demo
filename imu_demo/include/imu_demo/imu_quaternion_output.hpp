@@ -4,11 +4,13 @@
 #include <serial/serial.h>
 #include <std_msgs/String.h>
 #include <std_msgs/UInt8.h>
+#include <sensor_msgs/Imu.h>  
 
 #include <cinttypes>
 #include <cstdint>
 #include <memory>
 #include <vector>
+
 
 extern const uint8_t time_stamp = 0x50;
 extern const uint8_t acceleration = 0x51;

@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
 
     // Set the serial port name and baud rate (adjust as needed)
     std::string serial_port = "/dev/ttyUSB0";
-    int baud_rate = 9600;
+    int baud_rate = 115200;
 
     serial::Serial ser;
     try {

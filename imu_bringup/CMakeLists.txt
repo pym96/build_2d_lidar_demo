@@ -9,7 +9,8 @@ project(imu_bringup)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
     roscpp
-  roslaunch  # Add roslaunch as a required component
+    std_msgs
+    tf
 )
 
 ## Generate dynamic reconfigure parameters in the 'cfg' folder

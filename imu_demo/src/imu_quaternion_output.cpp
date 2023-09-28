@@ -1,7 +1,9 @@
 #include <ros/ros.h>
 #include <tf/transform_broadcaster.h>
 #include <geometry_msgs/TransformStamped.h>
+
 #include "imu_demo/imu_quaternion_output.hpp"
+
 
 const bool debug_ = true;
 
@@ -100,15 +102,18 @@ int main(int argc, char** argv) {
                     }
 
                     // Getthing roll yaw, and pitch, from the gyroscope constract
-                    roll = ((data.quaternion0_high << 8) | data.quaternion0_low) / 32768 * 180;
-                    pitch = ((data.quaternion1_high << 8) | data.quaternion1_low) / 32768 * 180;
+                    roll = static_cast<int16_t>((data.quaternion0_high << 8) | data.quaternion0_low);
+                    pitch = static_cast<int16_t>((data.quaternion1_high << 8) | data.quaternion1_low);
                     yaw = static_cast<int16_t>((data.quaternion2_high << 8) | data.quaternion2_low);
 
+                    double roll_ = roll * 0.0054931640625f;
+                    double pitch_ = pitch * 0.0054931640625f;
                     double yaw_ = yaw * 0.0054931640625f;
+                    
                     
                     ROS_INFO("Current roll is: %u, pitch is: %u, yaw is: %f",roll, pitch, yaw_); 
                     tf::Quaternion quaternion;
-                    quaternion.setRPY(0, 0, static_cast<double>(yaw_ * M_PI / 180));
+                    quaternion.setRPY(static_cast<double>(roll_ * M_PI / 180), static_cast<double>(pitch_ * M_PI / 180), static_cast<double>(yaw_ * M_PI / 180));
                     
                     // Create a transform message
                     geometry_msgs::TransformStamped transform_stamped;

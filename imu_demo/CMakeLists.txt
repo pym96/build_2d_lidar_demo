@@ -10,11 +10,11 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS roscpp std_msgs tf)
+find_package(catkin REQUIRED COMPONENTS roscpp std_msgs tf sensor_msgs)
 find_package(serial REQUIRED)
 
 catkin_package(
-  CATKIN_DEPENDS roscpp
+  CATKIN_DEPENDS roscpp tf std_msgs sensor_msgs
 )
 
 include_directories(
