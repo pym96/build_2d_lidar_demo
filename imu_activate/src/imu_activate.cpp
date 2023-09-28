@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     }
 
     if (ser.isOpen()) {
-        ROS_INFO_STREAM("Serial port initialized.");
+        ROS_INFO_STREAM("gyroscope_activation_node initialized.");
 
         // Create a message to send the hexadecimal values
         std_msgs::UInt8MultiArray msg;
@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
         // Publish the message to the serial port
         ser.write(msg.data);
 
-        // Close the serial port after sending the data (if needed)
+        // Close the serial port after sending the data 
         ser.close();
     } else {
         ROS_ERROR_STREAM("Serial port is not open.");

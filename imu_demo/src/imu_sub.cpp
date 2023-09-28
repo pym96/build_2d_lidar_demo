@@ -10,7 +10,7 @@
 /// Output content in hexadecimal
 void callBack(const std_msgs::UInt8::ConstPtr& msg){
 
-    ROS_INFO("Received message: 0x%d", msg->data);
+    ROS_INFO("Received message: 0x%x", msg->data);
 }
 
 

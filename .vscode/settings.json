@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/dan/learn/build_2dlidar_demo/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/opt/intel/l_openvino_toolkit_ubuntu20_2023.0.2.11065.e662b1a3301_x86_64/python/python3.8",
+        "/opt/intel/l_openvino_toolkit_ubuntu20_2023.0.2.11065.e662b1a3301_x86_64/python/python3"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/dan/learn/build_2dlidar_demo/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/opt/intel/l_openvino_toolkit_ubuntu20_2023.0.2.11065.e662b1a3301_x86_64/python/python3.8",
+        "/opt/intel/l_openvino_toolkit_ubuntu20_2023.0.2.11065.e662b1a3301_x86_64/python/python3"
+    ]
+}
