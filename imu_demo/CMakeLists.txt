@@ -25,7 +25,7 @@ include_directories(
 
 add_executable(${PROJECT_NAME}_node src/imu_demo.cpp)
 add_executable(${PROJECT_NAME}_sub_node src/imu_sub.cpp)
-add_executable(${PROJECT_NAME}_quaternion_node src/imu_quaternion_output.cpp)
+add_executable(${PROJECT_NAME}_quaternion_node src/imu_msg_pub.cpp)
 
 target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES} ${serial_LIBRARIES})
 target_link_libraries(${PROJECT_NAME}_sub_node ${catkin_LIBRARIES} ${serial_LIBRARIES})

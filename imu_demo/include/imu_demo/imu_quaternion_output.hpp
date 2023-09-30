@@ -13,7 +13,7 @@
 
 
 extern const uint8_t time_stamp = 0x50;
-extern const uint8_t acceleration = 0x51;
+extern const uint8_t linear_acceleration = 0x51;
 extern const uint8_t angular_velocity = 0x52;
 extern const uint8_t angle = 0x53;
 extern const uint8_t quaternion = 0x59;
