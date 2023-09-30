@@ -3,7 +3,7 @@
 <launch>
     <node name="richbeam_lidar" pkg="lakibeam1" type="lakibeam1_pcd_node" output="screen">
     <remap from="/richbeam_lidar/pcd" to="/pcd" />
-        <param name="frame_id" type="string" value="laser"/><!--frame_id设置-->
+        <param name="frame_id" type="string" value="base_link"/><!--frame_id设置-->
         <param name="output_topic" type="string" value="pcd" /><!--topic设置-->
         <param name="inverted" type="bool" value="false"/><!--配置是否倒装,true倒装-->
         <param name="hostip" type="string" value="0.0.0.0"/><!--配置本机监听地址，0.0.0.0表示监听全部-->
