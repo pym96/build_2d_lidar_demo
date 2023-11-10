@@ -110,7 +110,7 @@ int main(int argc, char** argv) {
                     // ROS_INFO("Current sizeof(packet) is: %ld",sizeof(packet));
                     ReceivePacket data_from_packet = fromVector(packet);
 
-                    #if 0
+                    #if 1
                     if(debug_) {
                          debug_serial_output_vector_hexadecimal(packet);
                          debug_serial_print_out_receive_packet(data_from_packet);
@@ -140,7 +140,7 @@ int main(int argc, char** argv) {
                     // ROS_INFO("Current sizeof(packet) is: %ld",sizeof(packet));
                     ReceivePacket data_from_packet = fromVector(packet);
 
-                    #if 0
+                    #if 1
                     if(debug_) {
                          debug_serial_output_vector_hexadecimal(packet);
                          debug_serial_print_out_receive_packet(data_from_packet);
@@ -167,7 +167,7 @@ int main(int argc, char** argv) {
                     // ROS_INFO("Current sizeof(packet) is: %ld",sizeof(packet));
                     ReceivePacket data_from_packet = fromVector(packet);
 
-                    #if 0
+                    #if 1
                     if(debug_) {
                          debug_serial_output_vector_hexadecimal(packet);
                          debug_serial_print_out_receive_packet(data_from_packet);
@@ -210,6 +210,7 @@ int main(int argc, char** argv) {
                 else{
                 // TODO: publish imu data
                     imu_pub.publish(imu); 
+
                 }
             }
         }

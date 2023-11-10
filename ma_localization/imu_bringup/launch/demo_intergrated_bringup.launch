@@ -1,0 +1,13 @@
+<launch>
+
+     <node name="imu_quaternion" pkg="imu_demo" type="imu_demo_quaternion_node" 
+        output="screen" />
+
+    <!-- 启动节点 -->
+    <!-- <node name="imu_activate" pkg="imu_activate" type="imu_activate_node" 
+    output="screen" launch-prefix="sh -c 'sleep 1; $0 $@'" /> -->
+
+    <node name="rviz" pkg="rviz" type="rviz" output="screen" />
+    
+
+</launch>
