@@ -1,4 +1,3 @@
-
 #include "imu_demo/imu_quaternion_output.hpp"
 
 #include <vector>
@@ -7,6 +6,8 @@
 #include <tf/transform_broadcaster.h>
 #include <geometry_msgs/TransformStamped.h>
 #include <sensor_msgs/Imu.h>
+
+#include <gflags/gflags.h>
 
 const bool debug_ = true;
 
@@ -42,6 +43,7 @@ void debug_serial_print_out_receive_packet(const ReceivePacket& packet){
 }
 
 int main(int argc, char** argv) {
+
     ros::init(argc, argv, "serial_demo_node");
 
     ros::NodeHandle nh;
