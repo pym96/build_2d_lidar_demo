@@ -52,14 +52,8 @@ catkin_package(
 
 add_executable(${PROJECT_NAME}_sub_node src/imu_sub.cpp)
 add_executable(${PROJECT_NAME}_quaternion_node src/imu_msg_pub.cpp)
-add_executable(${PROJECT_NAME}_odom_node src/odom_msg_pub.cpp)
 
 target_link_libraries(${PROJECT_NAME}_sub_node ${catkin_LIBRARIES} ${serial_LIBRARIES})
 
 target_link_libraries(${PROJECT_NAME}_quaternion_node ${catkin_LIBRARIES} ${serial_LIBRARIES})
 
-target_link_libraries(${PROJECT_NAME}_odom_node 
-                      ${catkin_LIBRARIES} 
-                      ${serial_LIBRARIES} 
-                      ${PCL_LIBRARIES}         
-                      ${PYTHON_LIBRARIES})

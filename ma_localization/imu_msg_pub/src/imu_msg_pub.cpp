@@ -123,9 +123,9 @@ int main(int argc, char** argv) {
                     l_acc_y = static_cast<int16_t>((data_from_packet.quaternion1_high << 8) | data_from_packet.quaternion1_low);
                     l_acc_z = static_cast<int16_t>((data_from_packet.quaternion2_high << 8) | data_from_packet.quaternion2_low);
                     
-                    double l_acc_x_ = l_acc_x / 32768. * (16 * 9.8);
-                    double l_acc_y_ = l_acc_y / 32768. * (16 * 9.8);
-                    double l_acc_z_ = l_acc_z / 32768. * (16 * 9.8);
+                    double l_acc_x_ = l_acc_x / 32768. * 16;
+                    double l_acc_y_ = l_acc_y / 32768. * 16;
+                    double l_acc_z_ = l_acc_z / 32768. * 16;
                     
                     imu.header.stamp = ros::Time::now();
                     imu.header.frame_id = "base_link";
@@ -223,5 +223,3 @@ int main(int argc, char** argv) {
 
     return 0;
 }
-
-
