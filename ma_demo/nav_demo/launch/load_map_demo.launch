@@ -1,11 +1,7 @@
 <launch>
-
     <node name="load_demo" pkg="map_server" type="map_server"
-          args="/home/dan/learn/buld2d_demo/src/ma_demo/nav_demo/map/my_map.yaml" />
-
-
+          args="/home/dan/learn/buld2d_demo/src/ma_demo/nav_demo/map/my_map.yaml">
+        <param name="frame_id" value="map" />
+    </node>
     <!-- Use amcl for localization -->
-
- 
-
 </launch>

@@ -128,7 +128,7 @@ int main(int argc, char** argv) {
                     double l_acc_z_ = l_acc_z / 32768. * 16. * 9.8;
                     
                     imu.header.stamp = ros::Time::now();
-                    imu.header.frame_id = "base_link";
+                    imu.header.frame_id = "odom";
 
                     imu.linear_acceleration.x = l_acc_x_;
                     imu.linear_acceleration.y = l_acc_y_;
@@ -191,8 +191,8 @@ int main(int argc, char** argv) {
                     // Create a transform message
                     geometry_msgs::TransformStamped transform_stamped;
                     transform_stamped.header.stamp = ros::Time::now();
-                    transform_stamped.header.frame_id = "base_link"; // Parent frame link
-                    transform_stamped.child_frame_id = "child_link"; // Child frame link
+                    transform_stamped.header.frame_id = "odom"; // Parent frame link
+                    transform_stamped.child_frame_id = "base_link"; // Child frame link
                     
                     geometry_msgs::Quaternion msg_quaternion;
                     msg_quaternion.x = quaternion.x();

@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="pcl_ros" type="convert_pcd_to_image" name="convert_pcd_to_image">
+    <param name="input" type="string" value="/home/dan/learn/buld2d_demo/src/ma_navigation/pcl2pcd/map/output.pcd"/>
+  </node>
+</launch>
